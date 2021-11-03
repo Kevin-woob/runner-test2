@@ -1,6 +1,11 @@
 window.onload = (function (){
 	var i = new Init(['canvas']);
+	var th = ch;
+	var tw = cw;
+	cw = tw;
+	ch = th;
 	var e = new Config(cw,ch);
+
 init();
 
 });
