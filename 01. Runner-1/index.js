@@ -1,7 +1,7 @@
 window.onload = (function (){
 	var i = new Init(['canvas']);
-	var th = ch;
-	var tw = cw;
+	var th = cw;
+	var tw = ch;
 	cw = tw;
 	ch = th;
 	var e = new Config(cw,ch);
