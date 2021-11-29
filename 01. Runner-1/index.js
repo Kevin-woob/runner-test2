@@ -1,11 +1,16 @@
 window.onload = (function (){
-	var i = new Init(['canvas']);
-	
-	var e = new Config(cw,ch);
-
-init();
+	setUp();
+	init();
 
 });
+
+function setUp (){
+	var i = new Init(['canvas']);
+	var e = new Config(cw,ch);
+	console.log("resized!");
+
+
+}
 
 // Function to generate random number 
 function randomInt(min, max) { 
@@ -84,8 +89,17 @@ start();
 
 function start(time){
 	if(!started){
-		if(mouse.m_down){
+		/// implement for tap too, else play not working
+		canvas.onclick = function(){
 			started = true;
+			toggleFullScreen();
+		};
+		canvas.ontouchstart = function(){
+			started = true;
+			toggleFullScreen();
+		};
+		if(mouse.m_down){
+			
 			
 		}
 		// startText.draw();
@@ -308,4 +322,15 @@ if(good.bounced){
 	last_frame = time;
 	frames ++;
 	requestAnimationFrame(start);
+}
+
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }
