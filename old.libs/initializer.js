@@ -5,7 +5,7 @@ if (canvasIdList.length ==1){
 
 	window.canvas=document.getElementById(canvasIdList[0]);
  window.ctx=canvas.getContext("2d");
-this.setCanvasWidthHeight(canvas);
+window.canvas = this.setCanvasWidthHeight(canvas);
  window.cw=canvas.width;
  window.ch=canvas.height;
  window.mouse = new mouseHandler(canvas);
@@ -32,8 +32,8 @@ this.setCanvasWidthHeight(canvas);
 
 	}
 	setCanvasWidthHeight(canvas){
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		canvas.width = window.innerHeight;
+		canvas.height = window.innerWidth;
 		return canvas;
 
 	}

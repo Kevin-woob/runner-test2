@@ -39,6 +39,8 @@ this.canvas.addEventListener('touchstart', e => {
 e.preventDefault();
 
 	this.m_down = true;
+	bgAudio.muted = false;
+	bgAudio.play();
 	//console.log("touch start is: " + e.touches[0].clientX + "chair x: " + word1.x);
   this.x = e.touches[0].clientX;
   this.y = e.touches[0].clientY;

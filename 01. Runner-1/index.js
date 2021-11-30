@@ -7,7 +7,7 @@ window.onload = (function (){
 function setUp (){
 	var i = new Init(['canvas']);
 	var e = new Config(cw,ch);
-	console.log("resized!");
+	// console.log("resized!");
 
 
 }
@@ -92,11 +92,11 @@ function start(time){
 		/// implement for tap too, else play not working
 		canvas.onclick = function(){
 			started = true;
-			toggleFullScreen();
+			// toggleFullScreen();
 		};
 		canvas.ontouchstart = function(){
 			started = true;
-			toggleFullScreen();
+			// toggleFullScreen();
 		};
 		if(mouse.m_down){
 			
