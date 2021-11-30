@@ -32,8 +32,8 @@ this.setCanvasWidthHeight(canvas);
 
 	}
 	setCanvasWidthHeight(canvas){
-		canvas.width = window.clientWidth;
-		canvas.height = window.clientWidth;
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
 		return canvas;
 
 	}
