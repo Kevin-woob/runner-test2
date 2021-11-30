@@ -92,13 +92,12 @@ function start(time){
 		/// implement for tap too, else play not working
 		canvas.onclick = function(){
 			started = true;
-			// toggleFullScreen();
-			bgAudio.play();
+			toggleFullScreen();
 		};
 		canvas.ontouchstart = function(){
 			started = true;
-			// toggleFullScreen();
-			bgAudio.play();
+			toggleFullScreen();
+			
 		};
 		if(mouse.m_down){
 			
