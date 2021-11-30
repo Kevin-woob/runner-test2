@@ -97,7 +97,7 @@ function start(time){
 		canvas.ontouchstart = function(){
 			started = true;
 			toggleFullScreen();
-			
+
 		};
 		if(mouse.m_down){
 			
@@ -299,7 +299,8 @@ function start(time){
 	if(player.hit(door)){
 		runner_go = 0;
 		setTimeout(function(){ 
-			window.location.replace("file:///D:/Canvas%20lab/Dino-1.0/Runner-1/index.html");
+			// window.location.replace("file:///D:/Canvas%20lab/Dino-1.0/Runner-1/index.html");
+			window.location.reload(false);
 
 		}, 2000);
 		
