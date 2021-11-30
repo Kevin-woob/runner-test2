@@ -93,12 +93,13 @@ function start(time){
 		canvas.onclick = function(){
 			started = true;
 			toggleFullScreen();
+			// bgAudio.play();
 		};
-		canvas.ontouchstart = function(){
-			started = true;
-			toggleFullScreen();
+		// canvas.ontouchstart = function(){
+		// 	started = true;
+		// 	toggleFullScreen();
 
-		};
+		// };
 		if(mouse.m_down){
 			
 			
