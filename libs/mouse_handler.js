@@ -65,7 +65,7 @@ this.canvas.addEventListener('touchend', e => {
     // Mute a singular HTML5 element
 function muteMe(elem) {
     elem.muted = false;
-    // elem.pause();
+    elem.pause();
 }
 
 // Try to mute all video and audio elements on the page
