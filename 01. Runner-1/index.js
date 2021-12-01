@@ -100,6 +100,7 @@ function start(time){
 			toggleFullScreen();
 bgAudio.play();
 		};
+		document.addEventListener('touchend', ()=>bgAudio.play());
 		if(mouse.m_down){
 			bgAudio.play();
 			
