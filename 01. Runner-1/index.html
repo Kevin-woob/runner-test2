@@ -7,7 +7,7 @@
 
 /*progress bar */
  .progress-bar {
-    /*position: absolute;*/
+    position: absolute;
     width: 500px;
     height: 3em;
     background-color: #111;
@@ -61,11 +61,11 @@ canvas{
    
 
 const progressBar = document.getElementsByClassName('progress-bar')[0];
-function addIt(number){
-  const computedStyle = getComputedStyle(progressBar);
+setInterval(() => {
+  const computedStyle = getComputedStyle(progressBar)
   const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
-  progressBar.style.setProperty('--width', width + number);
-}
+  progressBar.style.setProperty('--width', width + .1)
+}, 50)
 
 </script>
    
