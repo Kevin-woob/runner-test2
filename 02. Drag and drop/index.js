@@ -6,27 +6,6 @@ init();
 });
 
 function init(){
-	this.canvas.addEventListener('touchend', e => {
- 
-    //////////////////////////////////////////////////
-    // unmuting everything 
-    // Mute a singular HTML5 element
-function muteMe(elem) {
-    elem.muted = false;
-    elem.pause();
-}
-
-// Try to mute all video and audio elements on the page
-function mutePage() {
-    document.querySelectorAll("audio").forEach( elem => muteMe(elem) );
-}
-//////////////////////////////////////////////
-    // this.x = 0;
-    // this.y = 0;
-    
-  
-});
-
 
 
 
@@ -74,8 +53,13 @@ document.addEventListener('touchend', ()=>a1.play());
 //start the main loop
 start();
 }
+function muteMe(elem) {
+    elem.muted = false;
+    // elem.pause();
+}
 
 function start(){
+	document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
 	//frames
