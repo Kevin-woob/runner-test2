@@ -1,5 +1,5 @@
 window.onload = (function (){
-	document.getElementById("progress").style.display="none";
+	
 	setUp();
 	init();
 
@@ -20,7 +20,7 @@ function randomInt(min, max) {
 
 function init(){
 
-
+document.getElementById("progress").style.display="none"; 
 window.wordAudio = document.getElementById('wordAudio');
 window.bgAudio = document.getElementById('bgMusic');
 window.start_btn = document.getElementById("start_btn");
