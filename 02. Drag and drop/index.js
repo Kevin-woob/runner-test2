@@ -55,7 +55,7 @@ start();
 }
 function muteMe(elem) {
     elem.muted = false;
-    // elem.pause();
+    elem.pause();
 }
 
 function start(){
