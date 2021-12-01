@@ -60,6 +60,19 @@ this.canvas.addEventListener('touchmove', e => {
 this.canvas.addEventListener('touchend', e => {
   if (this.m_down === true) {
     this.m_down = false;
+    //////////////////////////////////////////////////
+    // unmuting everything 
+    // Mute a singular HTML5 element
+function muteMe(elem) {
+    elem.muted = false;
+    // elem.pause();
+}
+
+// Try to mute all video and audio elements on the page
+function mutePage() {
+    document.querySelectorAll("audio").forEach( elem => muteMe(elem) );
+}
+//////////////////////////////////////////////
     // this.x = 0;
     // this.y = 0;
     
