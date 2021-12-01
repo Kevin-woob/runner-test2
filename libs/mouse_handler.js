@@ -5,34 +5,7 @@ class mouseHandler{
 		this.y = 0;
 		this.m_down = false;
 
-
-		this.canvas.addEventListener('mousedown', e => {
-
-
-	this.m_down = true;
-	
-  this.x = e.offsetX;
-  this.y = e.offsetY;
-  
-});
-
-this.canvas.addEventListener('mousemove', e => {
-  if (this.m_down === true) {
-    
-    this.x = e.offsetX;
-    this.y = e.offsetY;	
-  }
-});
-
-this.canvas.addEventListener('mouseup', e => {
-  if (this.m_down === true) {
-    this.m_down = false;
-    // this.x = 0;
-    // this.y = 0;
-    
-  }
-});
-
+		
 //touch event handlers, copy of the mouse events replicated for touches
 
 this.canvas.addEventListener('touchstart', e => {
@@ -65,7 +38,7 @@ this.canvas.addEventListener('touchend', e => {
     // Mute a singular HTML5 element
 function muteMe(elem) {
     elem.muted = false;
-    elem.play();
+    // elem.pause();
 }
 
 // Try to mute all video and audio elements on the page
@@ -78,6 +51,36 @@ function mutePage() {
     
   }
 });
+
+
+		this.canvas.addEventListener('mousedown', e => {
+
+
+	this.m_down = true;
+	
+  this.x = e.offsetX;
+  this.y = e.offsetY;
+  
+});
+
+this.canvas.addEventListener('mousemove', e => {
+  if (this.m_down === true) {
+    
+    this.x = e.offsetX;
+    this.y = e.offsetY;	
+  }
+});
+
+this.canvas.addEventListener('mouseup', e => {
+  if (this.m_down === true) {
+    this.m_down = false;
+    // this.x = 0;
+    // this.y = 0;
+    
+  }
+});
+
+
 
 		
 	}
