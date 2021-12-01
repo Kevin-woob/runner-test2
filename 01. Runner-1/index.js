@@ -95,7 +95,7 @@ function start(time){
 			toggleFullScreen();
 			bgAudio.play();
 		};
-		canvas.ontouchstart = function(){
+		canvas.ontouchend = function(){
 			started = true;
 			toggleFullScreen();
 bgAudio.play();
