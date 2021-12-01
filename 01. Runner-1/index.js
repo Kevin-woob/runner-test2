@@ -101,6 +101,7 @@ function start(time){
 bgAudio.play();
 		};
 		document.addEventListener('touchend', ()=>bgAudio.play());
+		document.addEventListener('touchend', ()=>wordAudio.play());
 		if(mouse.m_down){
 			bgAudio.play();
 			
