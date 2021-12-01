@@ -303,8 +303,8 @@ document.addEventListener('touchend', ()=>bgAudio.play());
 	if(player.hit(door)){
 		runner_go = 0;
 		setTimeout(function(){ 
-			// window.location.replace("file:///D:/Canvas%20lab/Dino-1.0/Runner-1/index.html");
-			window.location.reload(false);
+			window.location.replace("../02. Drag and drop/index.html");
+			
 
 		}, 2000);
 		

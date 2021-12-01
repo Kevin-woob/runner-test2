@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<style>
+ body{ background-color:white; }
+ }
+</style>
+<script>
+
+</script>
+
+<script type="text/javascript" src="index.js"></script>
+<style type="text/css">
+    body{
+padding: 0;
+margin: 0;
+overflow: hidden;
+    }
+canvas{
+    /*background-color: #291503;*/
+}
+#canvas{ background: url('imgs/underground.png');
+ background-repeat: no-repeat;
+  background-size: cover; }
+</style>
+</head>
+<body>
+    <!-- <canvas id="canvasBG" width=800 height=800 ></canvas> -->
+ <canvas id="canvas" width=800 height=800 ></canvas>
+ <img id="img1" src="imgs/shelf1.png"/><img id="img2" src="imgs/shelf2.png"/><img id="img3" src="imgs/shelf3.png"/>
+
+
+  <!--  Running frames 6pcs-->
+   <img  class="player" src="imgs\running\running1.png"/>
+   <img  class="player" src="imgs\running\running2.png"/>
+   <img  class="player" src="imgs\running\running3.png"/>
+   <img  class="player" src="imgs\running\running4.png"/>
+   <img  class="player" src="imgs\running\running5.png"/>
+   <img  class="player" src="imgs\running\running6.png"/>
+<!-- Jumping frames 12pcs -->
+   <img  class="player" src="imgs\jumping\jumping1.png"/>
+   <img  class="player" src="imgs\jumping\jumping2.png"/>
+   <img  class="player" src="imgs\jumping\jumping3.png"/>
+   <img  class="player" src="imgs\jumping\jumping4.png"/>
+   <img  class="player" src="imgs\jumping\jumping5.png"/>
+   <img  class="player" src="imgs\jumping\jumping6.png"/>
+   <img  class="player" src="imgs\jumping\jumping7.png"/>
+   <img  class="player" src="imgs\jumping\jumping8.png"/>
+   <img  class="player" src="imgs\jumping\jumping9.png"/>
+   <img  class="player" src="imgs\jumping\jumping10.png"/>
+   <img  class="player" src="imgs\jumping\jumping11.png"/>
+   <img  class="player" src="imgs\jumping\jumping12.png"/>
+
+ <img  id="door" src="imgs/door2.png"/>
+ <img  id="underground" src="imgs/underground.png"/>
+
+ <audio src="sounds\shelf.mp3" id="a1"></audio>
+ <audio src="sounds\shelf.mp3" id="a2"></audio>
+ <audio src="sounds\shelf.mp3" id="a3"></audio>
+ <audio src="sounds\done.wav" id="done"></audio>
+ 
+<script src="..\libs\initializer.js"></script> 
+<script src="config.js"></script> 
+
+<script src="libs\GrayScaleImage.js"></script> 
+<script src="libs\ImageHolder.js"></script> 
+<script src="..\libs\mouse_handler.js"></script> 
+ <script type="text/javascript" src="..\..\..\untils.js"></script>
+ <script src="..\libs\runner.js"></script> 
+</body>
+</html>
