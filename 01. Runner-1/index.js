@@ -101,10 +101,10 @@ function start(time){
 			// toggleFullScreen();
 bgAudio.play();
 		};
-		document.addEventListener('touchend', ()=>bgAudio.play());
-		document.addEventListener('touchend', ()=>wordAudio.play());
+		
 		if(mouse.m_down){
-
+document.addEventListener('touchend', ()=>bgAudio.play());
+		document.addEventListener('touchend', ()=>wordAudio.play());
 			
 		}
 		// startText.draw();
