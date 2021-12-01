@@ -22,6 +22,9 @@ function init(){
 
 window.wordAudio = document.getElementById('wordAudio');
 window.bgAudio = document.getElementById('bgMusic');
+window.sound = new Howl({
+    src: [bgAudio.src]
+  });
 window.start_btn = document.getElementById("start_btn");
 
 bgAudio.loop = true;
@@ -110,7 +113,7 @@ bgAudio.play();
 		requestAnimationFrame(start);
 		return;
 	}
-	bgAudio.play();
+	sound.play();
 // fps control
 	if(time-last_frame < FRAME_MIN_TIME){ //skip the frame if the call is too early
         requestAnimationFrame(start);
