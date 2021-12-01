@@ -48,7 +48,7 @@ window.door = new img_holder(door_img,doorX ,doorY,doorWidth,doorHeight);
 //empty 
 window.currentObj = null;
 window.objPlacing = false;
-
+document.addEventListener('touchend', ()=>a1.play());
 //start the main loop
 start();
 }
@@ -170,13 +170,13 @@ if (rectCol(obj3,frame3)){
 		player.update(5);
 		
 
-		// if(player.hit(door)){
-		// 	setTimeout(function(){ 
+		if(player.hit(door)){
+			setTimeout(function(){ 
 			
-		// 	// window.location.replace("file:///D:/Canvas%20lab/Mario%20game/index.html");
+			window.location.replace("../03. Voice page/index.html");
 
-		// }, 2000);
-		// }
+		}, 2000);
+		}
 		
 	}
 	requestAnimationFrame(start);
