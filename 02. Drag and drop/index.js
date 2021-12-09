@@ -129,7 +129,7 @@ function start(){
 				  a2.play();
 				}
 				catch(err) {
-				  document.getElementById("console").innerHTML = "audio: " + a2.err.message;
+				  document.getElementById("console").innerHTML = "audio: " + err.message;
 				}
 			
 // a2.play();
