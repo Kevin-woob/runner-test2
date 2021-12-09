@@ -7,7 +7,7 @@ init();
 
 function init(){
 
-
+alert("loaded");
 
  //audios
  window.a1 = document.getElementById("a1");
@@ -21,7 +21,7 @@ function init(){
 	a1.load();
 	a2.load();
 	a3.load();
-	alert("loaded");
+	// alert("loaded");
 }
 
 
