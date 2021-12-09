@@ -27,14 +27,17 @@ function init(){
  	// osc.stop(0);
 
  	if(a1Play){
+ 		a1.load();
  		a1.play();
  		a1Play = false;
  	}
  	if(a2Play){
+ 		a2.load();
  		a2.play();
  		a2Play = false;
  	}
  	if(a3Play){
+ 		a3.load();
  		a3.play();
  		a3Play = false;
  	}
