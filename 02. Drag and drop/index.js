@@ -123,6 +123,7 @@ function start(){
 		canvas.ontouchend = function(){
 			// started = true;
 			// toggleFullScreen();
+			document.getElementById("console").innerHTML = "hello error";
 a1.play();
 		};
 		
