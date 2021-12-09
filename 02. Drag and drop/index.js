@@ -121,6 +121,7 @@ function start(){
 	//if mouse is down 
 	if(mouse.m_down ){
 		canvas.ontouchend = function(){
+			a1.load();
 			// started = true;
 			// toggleFullScreen();
 			document.getElementById("console").innerHTML = "audio: " + a1.readyState;
