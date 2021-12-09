@@ -121,11 +121,11 @@ function start(){
 	//if mouse is down 
 	if(mouse.m_down ){
 		canvas.ontouchend = function(){
-			a1.load();
+			a2.load();
 			// started = true;
 			// toggleFullScreen();
-			document.getElementById("console").innerHTML = "audio: " + a1.readyState;
-a1.play();
+			document.getElementById("console").innerHTML = "audio: " + a2.readyState;
+a2.play();
 		};
 		
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
