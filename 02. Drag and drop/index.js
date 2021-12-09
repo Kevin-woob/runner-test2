@@ -25,33 +25,33 @@ function init(){
 }
 
 
- canvas.addEventListener('touchend',()=>{
- 	a1.load();
-	a2.load();
-	a3.load();
- 	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
- 	// const osc = audioContext.createOscillator();
- 	// osc.connect(audioContext.destination);
- 	// osc.start(0);
- 	// osc.stop(0);
+ // canvas.addEventListener('touchend',()=>{
+ // 	a1.load();
+	// a2.load();
+	// a3.load();
+ // 	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
+ // 	// const osc = audioContext.createOscillator();
+ // 	// osc.connect(audioContext.destination);
+ // 	// osc.start(0);
+ // 	// osc.stop(0);
 
- 	if(a1Play){
- 		a1.load();
- 		a1.play();
- 		a1Play = false;
- 	}
- 	if(a2Play){
- 		a2.load();
- 		a2.play();
- 		a2Play = false;
- 	}
- 	if(a3Play){
- 		a3.load();
- 		a3.play();
- 		a3Play = false;
- 	}
+ // 	if(a1Play){
+ // 		a1.load();
+ // 		a1.play();
+ // 		a1Play = false;
+ // 	}
+ // 	if(a2Play){
+ // 		a2.load();
+ // 		a2.play();
+ // 		a2Play = false;
+ // 	}
+ // 	if(a3Play){
+ // 		a3.load();
+ // 		a3.play();
+ // 		a3Play = false;
+ // 	}
 
- });
+ // });
 
  ///images
  window.img1 = document.getElementById("img1");
@@ -89,7 +89,7 @@ window.currentObj = null;
 window.objPlacing = false;
 // document.addEventListener('touchend', ()=>a1.play());
 //start the main loop
-document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ),{once:true});
+// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ),{once:true});
 start();
 }
 function muteMe(elem) {
@@ -136,6 +136,7 @@ function start(){
 		
 				// document.addEventListener('touchend',a1.play() ,{once:true});
 				document.addEventListener('touchend', ()=>a1.play());
+				a1.play()
 				a1Play = true;
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
