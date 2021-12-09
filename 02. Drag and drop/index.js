@@ -17,6 +17,11 @@ function init(){
  window.a1Play = false;
  window.a2Play = false;
  window.a3Play = false;
+ document.onclick = function(){
+	a1.load();
+	a2.load();
+	a3.load();
+}
 
 
  canvas.addEventListener('touchend',()=>{
