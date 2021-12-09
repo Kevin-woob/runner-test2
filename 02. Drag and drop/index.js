@@ -99,39 +99,6 @@ function muteMe(elem) {
 }
 
 function start(){
-
-	canvas.addEventListener('touchend',()=>{
- // 	a1.load();
-	// a2.load();
-	// a3.load();
- 	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
- 	// const osc = audioContext.createOscillator();
- 	// osc.connect(audioContext.destination);
- 	// osc.start(0);
- 	// osc.stop(0);
-
- 	if(a1Play){
- 		// a1.load();
- 		a1.play();
- 		a1Play = false;
- 	}
- 	if(a2Play){
- 		// a2.load();
- 		a2.play();
- 		a2Play = false;
- 	}
- 	if(a3Play){
- 		// a3.load();
- 		a3.play();
- 		a3Play = false;
- 	}
-
- });
-
-
-
-
-
 	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 	// document.addEventListener('touchend', ()=>a1.play());
 	frames++;
@@ -168,6 +135,7 @@ function start(){
 		if (!obj1.set &&(currentObj == null || currentObj == obj1)){
 		
 				// document.addEventListener('touchend',a1.play() ,{once:true});
+				document.addEventListener('touchend', ()=>a1.play());
 				a1Play = true;
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
