@@ -120,11 +120,19 @@ function start(){
 	
 	//if mouse is down 
 	if(mouse.m_down ){
+		console.defaultError = console.error.bind(console);
+		console.errors = [];
+		console.error = function(){
+    // default &  console.error()
+    console.defaultError.apply(console, arguments);
+    // new & array data
+    console.errors.push(Array.from(arguments));
+}
 		canvas.ontouchend = function(){
 			// a2.load();
 			// started = true;
 			// toggleFullScreen();
-			document.getElementById("console").innerHTML = "audio: " + a2.readyState;
+			document.getElementById("console").innerHTML = "audio: " +console.errors[0];
 a2.play();
 		};
 		
