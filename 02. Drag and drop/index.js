@@ -121,7 +121,7 @@ function start(){
 	//if mouse is down 
 	if(mouse.m_down ){
 		canvas.ontouchend = function(){
-			a2.load();
+			// a2.load();
 			// started = true;
 			// toggleFullScreen();
 			document.getElementById("console").innerHTML = "audio: " + a2.readyState;
@@ -131,7 +131,7 @@ a2.play();
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
 
 		if (!obj2.set &&(currentObj == null || currentObj == obj2)){
-			document.addEventListener('touchend',a2.play() ,{once:true});
+			// document.addEventListener('touchend',a2.play() );
 				// a2.play();
 				a2Play = true;
 			currentObj = obj2;
