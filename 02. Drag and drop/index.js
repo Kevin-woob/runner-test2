@@ -49,9 +49,9 @@ window.door = new img_holder(door_img,doorX ,doorY,doorWidth,doorHeight);
 //empty 
 window.currentObj = null;
 window.objPlacing = false;
-// document.addEventListener('touchend', ()=>a1.play());
+document.addEventListener('touchend', ()=>a1.play());
 //start the main loop
-document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
+// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 start();
 }
 function muteMe(elem) {
