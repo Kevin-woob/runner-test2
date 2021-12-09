@@ -120,6 +120,11 @@ function start(){
 	
 	//if mouse is down 
 	if(mouse.m_down ){
+		canvas.ontouchend = function(){
+			// started = true;
+			// toggleFullScreen();
+a1.play();
+		};
 		
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
 
