@@ -86,7 +86,7 @@ function start(){
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
 
 		if (!obj2.set &&(currentObj == null || currentObj == obj2)){
-		
+			document.addEventListener('touchend',a2.play() ,{once:true});
 				a2.play();
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
