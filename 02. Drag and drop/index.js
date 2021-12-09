@@ -21,6 +21,7 @@ function init(){
 	a1.load();
 	a2.load();
 	a3.load();
+	alert("loaded");
 }
 
 
