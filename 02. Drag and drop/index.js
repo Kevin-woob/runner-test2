@@ -55,8 +55,8 @@ document.addEventListener('touchend', ()=> document.querySelectorAll("audio").fo
 start();
 }
 function muteMe(elem) {
-    // elem.muted = false;
-    elem.play();
+    elem.muted = false;
+    // elem.play();
 }
 
 function start(){
