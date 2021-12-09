@@ -17,7 +17,7 @@ function init(){
 
  canvas.addEventListener('touchend',()=>{
  	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
- 	const osc = new audioContext.createOscillator();
+ 	const osc = audioContext.createOscillator();
  	osc.connect(audioContext.destination);
  	osc.start(0);
  });
