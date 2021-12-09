@@ -14,13 +14,30 @@ function init(){
  window.a2 = document.getElementById("a2");
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
+ window.a1Play = false;
+ window.a2Play = false;
+ window.a3Play = false;
+
 
  canvas.addEventListener('touchmove',()=>{
- 	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
- 	const osc = audioContext.createOscillator();
- 	osc.connect(audioContext.destination);
- 	osc.start(0);
- 	osc.stop(0);
+ 	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
+ 	// const osc = audioContext.createOscillator();
+ 	// osc.connect(audioContext.destination);
+ 	// osc.start(0);
+ 	// osc.stop(0);
+
+ 	if(a1Play){
+ 		a1.play();
+ 		a1Play = false;
+ 	}
+ 	if(a2Play){
+ 		a2.play();
+ 		a2Play = false;
+ 	}
+ 	if(a3Play){
+ 		a3.play();
+ 		a3Play = false;
+ 	}
 
  });
 
@@ -96,7 +113,8 @@ function start(){
 
 		if (!obj2.set &&(currentObj == null || currentObj == obj2)){
 			document.addEventListener('touchend',a2.play() ,{once:true});
-				a2.play();
+				// a2.play();
+				a2Play = true;
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
 		}
@@ -104,7 +122,8 @@ function start(){
 
 		if (!obj1.set &&(currentObj == null || currentObj == obj1)){
 		
-				document.addEventListener('touchend',a1.play() ,{once:true});
+				// document.addEventListener('touchend',a1.play() ,{once:true});
+				a1Play = true;
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
 		}
@@ -112,7 +131,8 @@ function start(){
 
 		if (!obj3.set &&(currentObj == null || currentObj == obj3)){
 		
-				a3.play();
+				// a3.play();
+				a3Play = true;
 				currentObj = obj3;
 				obj3.update(mouse.x,mouse.y, 25);}
 		}
