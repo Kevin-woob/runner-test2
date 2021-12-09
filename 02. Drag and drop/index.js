@@ -15,12 +15,13 @@ function init(){
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
 
- canvas.addEventListener('touchend',()=>{
+ canvas.addEventListener('touchstart',()=>{
  	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
  	const osc = audioContext.createOscillator();
  	osc.connect(audioContext.destination);
  	osc.start(0);
- 	osc.stop(1);
+ 	osc.stop(0);
+
  });
 
  ///images
