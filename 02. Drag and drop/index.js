@@ -7,7 +7,7 @@ init();
 
 function init(){
 
-alert("loaded");
+// alert("loaded");
 
  //audios
  window.a1 = document.getElementById("a1");
@@ -26,6 +26,9 @@ alert("loaded");
 
 
  canvas.addEventListener('touchend',()=>{
+ 	a1.load();
+	a2.load();
+	a3.load();
  	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
  	// const osc = audioContext.createOscillator();
  	// osc.connect(audioContext.destination);
