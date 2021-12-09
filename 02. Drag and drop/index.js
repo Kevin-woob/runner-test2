@@ -20,6 +20,7 @@ function init(){
  	const osc = audioContext.createOscillator();
  	osc.connect(audioContext.destination);
  	osc.start(0);
+ 	osc.stop(1);
  });
 
  ///images
