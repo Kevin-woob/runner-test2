@@ -15,7 +15,7 @@ function init(){
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
 
- canvas.addEventListener('touchstart',()=>{
+ canvas.addEventListener('touchmove',()=>{
  	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
  	const osc = audioContext.createOscillator();
  	osc.connect(audioContext.destination);
