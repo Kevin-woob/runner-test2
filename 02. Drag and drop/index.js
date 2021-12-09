@@ -51,6 +51,7 @@ window.currentObj = null;
 window.objPlacing = false;
 document.addEventListener('touchend', ()=>a1.play());
 //start the main loop
+document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 start();
 }
 function muteMe(elem) {
@@ -59,7 +60,7 @@ function muteMe(elem) {
 }
 
 function start(){
-	document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
+	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 	// document.addEventListener('touchend', ()=>a1.play());
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
