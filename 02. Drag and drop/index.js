@@ -19,7 +19,7 @@ function init(){
  window.a3Play = false;
 
 
- canvas.addEventListener('touchmove',()=>{
+ canvas.addEventListener('touchend',()=>{
  	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
  	// const osc = audioContext.createOscillator();
  	// osc.connect(audioContext.destination);
