@@ -15,6 +15,13 @@ function init(){
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
 
+ ctx.addEventListener('touchend',()=>{
+ 	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
+ 	const osc = new audioContext.createOscillator();
+ 	osc.connect(audioContext.destination);
+ 	osc.start(0);
+ });
+
  ///images
  window.img1 = document.getElementById("img1");
  window.img2 = document.getElementById("img2");
