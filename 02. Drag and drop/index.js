@@ -94,7 +94,7 @@ function start(){
 
 		if (!obj1.set &&(currentObj == null || currentObj == obj1)){
 		
-				document.addEventListener('touchstart',a1.play() );
+				document.addEventListener('touchend',a1.play() );
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
 		}
