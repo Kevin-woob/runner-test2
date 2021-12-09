@@ -15,7 +15,7 @@ function init(){
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
 
- ctx.addEventListener('touchend',()=>{
+ canvas.addEventListener('touchend',()=>{
  	const audioContext = new (window.AudioContext|| window.webkitAudioContext);
  	const osc = new audioContext.createOscillator();
  	osc.connect(audioContext.destination);
