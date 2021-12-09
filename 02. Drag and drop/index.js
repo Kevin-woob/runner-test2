@@ -54,12 +54,13 @@ document.addEventListener('touchend', ()=>a1.play());
 start();
 }
 function muteMe(elem) {
-    elem.muted = false;
+    // elem.muted = false;
     elem.play();
 }
 
 function start(){
 	document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
+	// document.addEventListener('touchend', ()=>a1.play());
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
 	//frames
