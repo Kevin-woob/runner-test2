@@ -100,7 +100,13 @@ function muteMe(elem) {
 
 function start(){
 	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
-	document.addEventListener('touchend', ()=>a2.play());
+	// document.addEventListener('touchend', ()=>a2.play());
+
+	if(mouse.m_down){
+document.addEventListener('touchend', ()=>a2.play());
+		// document.addEventListener('touchend', ()=>wordAudio.play());
+			
+		}
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
 	//frames
