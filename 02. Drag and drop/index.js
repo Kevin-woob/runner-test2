@@ -93,7 +93,7 @@ window.objPlacing = false;
 start();
 }
 function muteMe(elem) {
-    elem.muted = true;
+    // elem.muted = true;
     // elem.pause();
     elem.play();
 }
