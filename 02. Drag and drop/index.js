@@ -93,13 +93,13 @@ window.objPlacing = false;
 start();
 }
 function muteMe(elem) {
-    elem.muted = false;
+    elem.muted = true;
     // elem.pause();
-    // elem.play();
+    elem.play();
 }
 
 function start(){
-	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
+	document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
 	// document.addEventListener('touchend', ()=>a1.play());
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
