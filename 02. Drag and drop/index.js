@@ -17,12 +17,12 @@ function init(){
  window.a1Play = false;
  window.a2Play = false;
  window.a3Play = false;
- document.onclick = function(){
-	a1.load();
-	a2.load();
-	a3.load();
-	// alert("loaded");
-}
+//  document.onclick = function(){
+// 	a1.load();
+// 	a2.load();
+// 	a3.load();
+// 	// alert("loaded");
+// }
 
 
  // canvas.addEventListener('touchend',()=>{
@@ -103,7 +103,7 @@ function start(){
 	// document.addEventListener('touchend', ()=>a2.play());
 
 	if(mouse.m_down){
-document.addEventListener('touchend', ()=>a2.play());
+document.addEventListener('touchend', ()=>a_done.play());
 		// document.addEventListener('touchend', ()=>wordAudio.play());
 			
 		}
