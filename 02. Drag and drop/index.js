@@ -126,6 +126,7 @@ function start(){
 			// started = true;
 			// toggleFullScreen();
 			try {
+				a2.muted = false;
 				  a2.play();
 				  document.getElementById("console").innerHTML = "audio: " + a2.readyState;
 				}
