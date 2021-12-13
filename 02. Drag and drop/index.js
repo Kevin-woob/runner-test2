@@ -135,7 +135,7 @@ document.addEventListener('touchend', ()=>a2.play());
 			try {
 				// a2.muted = false;
 				  a2.play();
-				  document.getElementById("console").innerHTML = "audio: " + a2.readyState;
+				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
 				}
 				catch(err) {
 				  document.getElementById("console").innerHTML = "audio: " + err.message;
