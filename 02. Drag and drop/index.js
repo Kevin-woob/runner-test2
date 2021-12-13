@@ -151,6 +151,8 @@ function start(){
 		if (!obj2.set &&(currentObj == null || currentObj == obj2)){
 			// document.addEventListener('touchend',a2.play() );
 				// a2.play();
+				a_done.currentTime = 1.4;
+				a_done.play();
 				a2Play = true;
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
@@ -161,7 +163,7 @@ function start(){
 		
 				// document.addEventListener('touchend',a1.play() ,{once:true});
 				// document.addEventListener('touchend', ()=>a1.play());
-				
+
 				// a1.play()
 				a1Play = true;
 				currentObj = obj1;
