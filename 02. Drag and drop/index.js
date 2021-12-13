@@ -134,6 +134,7 @@ document.addEventListener('touchend', ()=>a2.play());
 			// toggleFullScreen();
 			try {
 				// a2.muted = false;
+				
 				  a2.play();
 				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
 				}
