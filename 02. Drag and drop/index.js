@@ -103,9 +103,9 @@ function start(){
 	// document.addEventListener('touchend', ()=>a2.play());
 
 	if(mouse.m_down){
-document.addEventListener('touchend', ()=>a2.play());
+// document.addEventListener('touchend', ()=>a2.play());
 
-		document.addEventListener('touchend', ()=>a_done.play());
+// 		document.addEventListener('touchend', ()=>a_done.play());
 			
 		}
 	frames++;
@@ -134,7 +134,8 @@ document.addEventListener('touchend', ()=>a2.play());
 			// toggleFullScreen();
 			try {
 				// a2.muted = false;
-				
+					a_done.currentTime = 1.4;
+					a_done.play();
 				  a2.play();
 				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
 				}
