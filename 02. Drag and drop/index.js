@@ -136,7 +136,7 @@ function start(){
 				// a2.muted = false;
 					a_done.currentTime = 1.4;
 					a_done.play();
-				  a2.play();
+				  // a2.play();
 				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
 				}
 				catch(err) {
@@ -160,8 +160,9 @@ function start(){
 		if (!obj1.set &&(currentObj == null || currentObj == obj1)){
 		
 				// document.addEventListener('touchend',a1.play() ,{once:true});
-				document.addEventListener('touchend', ()=>a1.play());
-				a1.play()
+				// document.addEventListener('touchend', ()=>a1.play());
+				
+				// a1.play()
 				a1Play = true;
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
