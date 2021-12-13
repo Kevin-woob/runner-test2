@@ -99,8 +99,8 @@ function muteMe(elem) {
 }
 
 function start(){
-	document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
-	// document.addEventListener('touchend', ()=>a1.play());
+	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
+	document.addEventListener('touchend', ()=>a2.play());
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
 	//frames
@@ -126,7 +126,7 @@ function start(){
 			// started = true;
 			// toggleFullScreen();
 			try {
-				a2.muted = false;
+				// a2.muted = false;
 				  a2.play();
 				  document.getElementById("console").innerHTML = "audio: " + a2.readyState;
 				}
