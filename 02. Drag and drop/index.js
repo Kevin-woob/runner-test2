@@ -105,7 +105,7 @@ function start(){
 	if(mouse.m_down){
 document.addEventListener('touchend', ()=>a2.play());
 
-		// document.addEventListener('touchend', ()=>wordAudio.play());
+		document.addEventListener('touchend', ()=>a_done.play());
 			
 		}
 	frames++;
