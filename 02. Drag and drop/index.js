@@ -105,7 +105,7 @@ function start(){
 	if(mouse.m_down){
 // document.addEventListener('touchend', ()=>a2.play());
 
-// 		document.addEventListener('touchend', ()=>a_done.play());
+		document.addEventListener('touchend', ()=>a_done.play());
 			
 		}
 	frames++;
@@ -128,23 +128,23 @@ function start(){
 	//if mouse is down 
 	if(mouse.m_down ){
 
-		canvas.ontouchend = function(){
-			// a2.load();
-			// started = true;
-			// toggleFullScreen();
-			try {
-				// a2.muted = false;
-					a_done.currentTime = 1.4;
-					a_done.play();
-				  // a2.play();
-				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
-				}
-				catch(err) {
-				  document.getElementById("console").innerHTML = "audio: " + err.message;
-				}
+// 		canvas.ontouchend = function(){
+// 			// a2.load();
+// 			// started = true;
+// 			// toggleFullScreen();
+// 			try {
+// 				// a2.muted = false;
+// 					a_done.currentTime = 1.4;
+// 					a_done.play();
+// 				  // a2.play();
+// 				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
+// 				}
+// 				catch(err) {
+// 				  document.getElementById("console").innerHTML = "audio: " + err.message;
+// 				}
 			
-// a2.play();
-		};
+// // a2.play();
+// 		};
 		
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
 
