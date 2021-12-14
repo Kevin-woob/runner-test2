@@ -150,7 +150,7 @@ function start(){
 			// document.addEventListener('touchend',a2.play() );
 				// a2.play();
 				a_done.currentTime = 1.4;
-				voice.play();
+				// voice.play();
 				
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
@@ -164,7 +164,7 @@ function start(){
 
 				// a1.play()
 				a_done.currentTime = 1.4;
-				voice.play();
+				// voice.play();
 				
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
@@ -175,7 +175,7 @@ function start(){
 		
 				// a3.play();
 				a_done.currentTime = 1.4;
-				voice.play();
+				// voice.play();
 				
 				currentObj = obj3;
 				obj3.update(mouse.x,mouse.y, 25);}
@@ -192,7 +192,7 @@ function start(){
 
 			
 			a_done.currentTime = 0;
-			voice.play();
+			// voice.play();
 		}
 		
 		
@@ -217,7 +217,7 @@ function start(){
 		if(!obj2.set){
 			mouse.m_down = false;
 			
-			a_done.play();
+			// a_done.play();
 		}
 	
 		if(Math.floor(obj2.x )!= Math.floor(frame2.x) || Math.floor(obj2.y )!= Math.floor(frame2.y)){
