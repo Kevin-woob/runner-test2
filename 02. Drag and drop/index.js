@@ -151,7 +151,7 @@ function start(){
 				// a2.play();
 				a_done.currentTime = 1.4;
 				voice.play();
-				a2Play = true;
+				
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
 		}
@@ -165,7 +165,7 @@ function start(){
 				// a1.play()
 				a_done.currentTime = 1.4;
 				voice.play();
-				a1Play = true;
+				
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
 		}
@@ -176,7 +176,7 @@ function start(){
 				// a3.play();
 				a_done.currentTime = 1.4;
 				voice.play();
-				a3Play = true;
+				
 				currentObj = obj3;
 				obj3.update(mouse.x,mouse.y, 25);}
 		}
