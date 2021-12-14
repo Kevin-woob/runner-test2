@@ -189,8 +189,6 @@ function start(){
 		
 		if(!obj1.set){
 			mouse.m_down = false;
-
-			
 			a_done.currentTime = 0;
 			// voice.play();
 		}
@@ -216,6 +214,7 @@ function start(){
 		
 		if(!obj2.set){
 			mouse.m_down = false;
+			a_done.currentTime = 0;
 			
 			// a_done.play();
 		}
@@ -234,8 +233,7 @@ if (rectCol(obj3,frame3)){
 		
 		if(!obj3.set){
 			mouse.m_down = false;
-			// objPlacing = true;
-			a_done.play();
+			a_done.currentTime = 0;
 		}
 		
 	
