@@ -14,9 +14,7 @@ function init(){
  window.a2 = document.getElementById("a2");
  window.a3 = document.getElementById("a3");
  window.a_done = document.getElementById("done");
- window.a1Play = false;
- window.a2Play = false;
- window.a3Play = false;
+ window.voice = new SoundPlayer(a_done);
 //  document.onclick = function(){
 // 	a1.load();
 // 	a2.load();
@@ -152,7 +150,7 @@ function start(){
 			// document.addEventListener('touchend',a2.play() );
 				// a2.play();
 				a_done.currentTime = 1.4;
-				a_done.play();
+				voice.play();
 				a2Play = true;
 			currentObj = obj2;
 				obj2.update(mouse.x,mouse.y, 25);}
@@ -166,7 +164,7 @@ function start(){
 
 				// a1.play()
 				a_done.currentTime = 1.4;
-				a_done.play();
+				voice.play();
 				a1Play = true;
 				currentObj = obj1;
 				obj1.update(mouse.x,mouse.y, 25);}
@@ -177,7 +175,7 @@ function start(){
 		
 				// a3.play();
 				a_done.currentTime = 1.4;
-				a_done.play();
+				voice.play();
 				a3Play = true;
 				currentObj = obj3;
 				obj3.update(mouse.x,mouse.y, 25);}
@@ -191,8 +189,10 @@ function start(){
 		
 		if(!obj1.set){
 			mouse.m_down = false;
+
 			
-			a_done.play();
+			a_done.currentTime = 0;
+			voice.play();
 		}
 		
 		
