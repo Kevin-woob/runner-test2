@@ -15,6 +15,7 @@ class AudioRecorder{
 			msg = 'im here inside the device';
 			this.recorder = new MediaRecorder(stream);
 			this.recorder.ondataavailable = e =>{
+				msg = 'ondataavailable';
 				this.items.push(e.data);
 				if(this.recorder.state == 'inactive')
 				{
@@ -27,6 +28,7 @@ class AudioRecorder{
 				}
 			}
 			this.recorder.start(100);
+			msg = 'after start';
 			setTimeout(() =>{
 				this.recorder.stop();
 				// this.audioElement.play();
