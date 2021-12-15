@@ -40,12 +40,12 @@ function start(){
 		/// implement for tap too, else play not working
 		canvas.onclick = function(){
 			started = true;
-			document.addEventListener('touchend', ()=>a_done.play());
+			document.addEventListener('touchend', ()=>wordAudio.play());
 				
 		};
 		canvas.ontouchend = function(){
 			started = true;
-			document.addEventListener('touchend', ()=>a_done.play());
+			document.addEventListener('touchend', ()=>wordAudio.play());
 			
 		};
 	
