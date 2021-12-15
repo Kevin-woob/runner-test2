@@ -26,7 +26,7 @@ class AudioRecorder{
 					this.audioElement.setAttribute('id','recorded');
 					if(document.body != null){
     			document.body.appendChild(this.audioElement);
-    		}
+    			
 }
 					// msg = 'done recording' + this.items.length;
 					document.addEventListener('touchend', ()=>this.audioElement.play());
