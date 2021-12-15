@@ -81,8 +81,8 @@ function start(){
 		window.v = new AudioVisualizer(ctx,coords,recorderAudio);
 		ownRecordImg = document.getElementById("recordPlay2");
 		// v.audioElement.play();
-		document.addEventListener('touchend', ()=>recorderAudio.play());
-		document.getElementById('error').innerHTML = recorderAudio.readyState;
+		document.addEventListener('touchend', ()=>v.audioElement.play());
+		document.getElementById('error').innerHTML = v.audioElement.duration;
 		// v.noise();
 		
 
