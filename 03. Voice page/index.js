@@ -88,7 +88,7 @@ function start(){
     window.r_audio = document.getElementById('recorded');
 
 		document.addEventListener('touchend', ()=>r_audio.play());
-		document.getElementById('error').innerHTML = r_audio.readyState.replace(/[^\w\s]/gi, '00');
+		document.getElementById('error').innerHTML = r_audio.replace(/[^\w\s]/gi, '00');
 		// v.noise();
 		
 
