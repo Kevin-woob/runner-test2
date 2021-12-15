@@ -82,7 +82,7 @@ function start(){
 		ownRecordImg = document.getElementById("recordPlay2");
 		// v.audioElement.play();
 		document.addEventListener('touchend', ()=>recorderAudio.play());
-		document.getElementById('error').innerHTML = v.audioElement.readyState;
+		document.getElementById('error').innerHTML = recorderAudio.readyState;
 		// v.noise();
 		
 
