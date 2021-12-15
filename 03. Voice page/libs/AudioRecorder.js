@@ -25,7 +25,7 @@ class AudioRecorder{
 					this.audioElement.innerHTML = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
 					// msg = 'done recording' + this.items.length;
 					document.addEventListener('touchend', ()=>this.audioElement.play());
-					msg = 'done playing' + this.audioElement.innerHTML;//.replace('<', '..'); 
+					msg = 'done playing' + this.audioElement.innerHTML;
 
 				}
 			}
