@@ -8,6 +8,8 @@ init();
 function init(){
 	window.started = false;
 
+	window.msg = '';
+
 	//word image
 	window.word = document.getElementById("word");
 	window.start_btn = document.getElementById("start_btn");
@@ -82,7 +84,7 @@ function start(){
 		ownRecordImg = document.getElementById("recordPlay2");
 		// v.audioElement.play();
 		document.addEventListener('touchend', ()=>recorderAudio.play());
-		document.getElementById('error').innerHTML = recorderAudio.duration;
+		document.getElementById('error').innerHTML = msg;
 		// v.noise();
 		
 

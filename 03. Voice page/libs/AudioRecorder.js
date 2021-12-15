@@ -11,6 +11,7 @@ class AudioRecorder{
 		this.audioElement = new Audio();
 		this.items = [];
 		this.device.then(stream => {
+			msg = 'im here inside the device';
 			this.recorder = new MediaRecorder(stream);
 			this.recorder.ondataavailable = e =>{
 				this.items.push(e.data);
