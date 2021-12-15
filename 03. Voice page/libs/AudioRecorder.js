@@ -10,6 +10,7 @@ class AudioRecorder{
 	record(){
 		this.audioElement = new Audio();
 		this.items = [];
+		msg = 'im here outside the device';
 		this.device.then(stream => {
 			msg = 'im here inside the device';
 			this.recorder = new MediaRecorder(stream);
@@ -17,10 +18,11 @@ class AudioRecorder{
 				this.items.push(e.data);
 				if(this.recorder.state == 'inactive')
 				{
+
 					this.blob = new Blob(this.items,{type:'audio/webm'});
 					// this.audioElement.removeChild(this.audioElement.lastChild);
 					this.audioElement.innerHTML = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
-					
+					msg = 'done recording';
 
 				}
 			}
