@@ -23,9 +23,10 @@ class AudioRecorder{
 					this.blob = new Blob(this.items,{type:'audio/webm'});
 					// this.audioElement.removeChild(this.audioElement.lastChild);
 					this.audioElement.setAttribute('src', URL.createObjectURL(this.blob));// = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
+					this.audioElement.setAttribute('id','recorded');
 					// msg = 'done recording' + this.items.length;
-					document.addEventListener('touchend', ()=>this.audioElement.play());
-					msg = 'done playing' + this.audioElement.readyState;
+					document.addEventListener('touchend', ()=>document.getElementById('recorded').play());
+					msg = 'done playing' + document.getElementById('recorded').readyState;
 
 				}
 			}
