@@ -10,12 +10,12 @@ class AudioRecorder{
 	record(){
 		this.audioElement = new Audio();
 		this.items = [];
-		msg = 'im here outside the device';
+		// msg = 'im here outside the device';
 		this.device.then(stream => {
-			msg = 'im here inside the device';
+			// msg = 'im here inside the device';
 			this.recorder = new MediaRecorder(stream);
 			this.recorder.ondataavailable = e =>{
-				msg = 'ondataavailable';
+				// msg = 'ondataavailable';
 				this.items.push(e.data);
 				if(this.recorder.state == 'inactive')
 				{
@@ -24,17 +24,16 @@ class AudioRecorder{
 					// this.audioElement.removeChild(this.audioElement.lastChild);
 					this.audioElement.setAttribute('src', URL.createObjectURL(this.blob));// = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
 					this.audioElement.setAttribute('id','recorded');
-					if(document.body != null){
-    document.body.appendChild(this.audioElement);
-}
+				// 	if(document.body != null){
+    // document.body.appendChild(this.audioElement);}
 					// msg = 'done recording' + this.items.length;
 					document.addEventListener('touchend', ()=>this.audioElement.play());
-					msg = 'done playing' + this.audioElement.readyState;
+					// msg = 'done playing' + this.audioElement.readyState;
 
 				}
 			}
 			this.recorder.start(100);
-			msg = 'after start';
+			// msg = 'after start';
 			setTimeout(() =>{
 				this.recorder.stop();
 				// this.audioElement.play();
