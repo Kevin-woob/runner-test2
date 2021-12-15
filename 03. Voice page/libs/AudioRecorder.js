@@ -29,8 +29,8 @@ class AudioRecorder{
     		}
 }
 					// msg = 'done recording' + this.items.length;
-					document.addEventListener('touchend', ()=>document.getElementById('recorded').play());
-					msg = 'done playing' + document.getElementById('recorded').readyState;
+					document.addEventListener('touchend', ()=>this.audioElement.play());
+					msg = 'done playing' + this.audioElement.readyState;
 
 				}
 			}
