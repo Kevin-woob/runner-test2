@@ -6,9 +6,11 @@ init();
 });
 
 function init(){
+	window.started = false;
 
 	//word image
 	window.word = document.getElementById("word");
+	window.start_btn = document.getElementById("start_btn");
 
 	// audio to listen
 	window.wordAudio = document.getElementById("wordAudio");
@@ -34,6 +36,23 @@ start();
 }
 
 function start(){
+	if(!started){
+		/// implement for tap too, else play not working
+		canvas.onclick = function(){
+			started = true;
+			document.addEventListener('touchend', ()=>a_done.play());
+				
+		};
+		canvas.ontouchend = function(){
+			started = true;
+			document.addEventListener('touchend', ()=>a_done.play());
+			
+		};
+	
+		ctx.drawImage(start_btn,startBtnX,startBtnY,startBtnWidth,startBtnHeight);
+		requestAnimationFrame(start);
+		return;
+	}
 	ctx.clearRect(0,0,cw,ch);
 	//play button
 	ctx.drawImage(audioPlayImg,playBtnX,playBtnY,btnWidth,btnHeight);
