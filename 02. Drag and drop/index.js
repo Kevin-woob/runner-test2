@@ -64,7 +64,11 @@ function start(){
 			document.addEventListener('touchend', ()=>a_done.play());
 				
 		};
-		
+		canvas.ontouchend = function(){
+			started = true;
+			document.addEventListener('touchend', ()=>a_done.play());
+			
+		};
 	
 		ctx.drawImage(start_btn,startBtnX,startBtnY,startBtnWidth,startBtnHeight);
 		requestAnimationFrame(start);
