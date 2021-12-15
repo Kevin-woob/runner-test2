@@ -28,7 +28,7 @@ class AudioRecorder{
 				// 	if(document.body != null){
     // document.body.appendChild(this.audioElement);}
 					// msg = 'done recording' + this.items.length;
-					document.addEventListener('touchend', ()=>this.audioElement.play());
+					// document.addEventListener('touchend', ()=>this.audioElement.play());
 					// msg = 'done playing' + this.audioElement.readyState;
 
 				}
