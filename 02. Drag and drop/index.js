@@ -63,7 +63,7 @@ function start(){
 			started = true;
 			document.addEventListener('touchend', ()=>a_done.play());
 				
-		};};
+		};
 		
 	
 		ctx.drawImage(start_btn,startBtnX,startBtnY,startBtnWidth,startBtnHeight);
