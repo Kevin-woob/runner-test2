@@ -10,48 +10,13 @@ function init(){
 // alert("loaded");
 
  //audios
- window.a1 = document.getElementById("a1");
- window.a2 = document.getElementById("a2");
- window.a3 = document.getElementById("a3");
- window.a_done = document.getElementById("done");
- window.voice = new SoundPlayer(a_done);
-//  document.onclick = function(){
-// 	a1.load();
-// 	a2.load();
-// 	a3.load();
-// 	// alert("loaded");
-// }
+  window.a_done = document.getElementById("done");
+  
+ // window.voice = new SoundPlayer(a_done);
 
-
- // canvas.addEventListener('touchend',()=>{
- // 	a1.load();
-	// a2.load();
-	// a3.load();
- // 	// const audioContext = new (window.AudioContext|| window.webkitAudioContext);
- // 	// const osc = audioContext.createOscillator();
- // 	// osc.connect(audioContext.destination);
- // 	// osc.start(0);
- // 	// osc.stop(0);
-
- // 	if(a1Play){
- // 		a1.load();
- // 		a1.play();
- // 		a1Play = false;
- // 	}
- // 	if(a2Play){
- // 		a2.load();
- // 		a2.play();
- // 		a2Play = false;
- // 	}
- // 	if(a3Play){
- // 		a3.load();
- // 		a3.play();
- // 		a3Play = false;
- // 	}
-
- // });
 
  ///images
+ window.start_btn = document.getElementById("start_btn");
  window.img1 = document.getElementById("img1");
  window.img2 = document.getElementById("img2");
  window.img3 = document.getElementById("img3");
@@ -85,27 +50,29 @@ window.door = new img_holder(door_img,doorX ,doorY,doorWidth,doorHeight);
 //empty 
 window.currentObj = null;
 window.objPlacing = false;
-// document.addEventListener('touchend', ()=>a1.play());
-//start the main loop
-// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ),{once:true});
+
 start();
 }
-function muteMe(elem) {
-    // elem.muted = true;
-    // elem.pause();
-    elem.play();
-}
+
 
 function start(){
-	// document.addEventListener('touchend', ()=> document.querySelectorAll("audio").forEach( elem => muteMe(elem) ));
-	// document.addEventListener('touchend', ()=>a2.play());
 
-	if(mouse.m_down){
-// document.addEventListener('touchend', ()=>a2.play());
+	if(!started){
+		/// implement for tap too, else play not working
+		canvas.onclick = function(){
+			started = true;
+			document.addEventListener('touchend', ()=>a_done.play());
+				
+		};};
+		
+	
+		ctx.drawImage(start_btn,startBtnX,startBtnY,startBtnWidth,startBtnHeight);
+		requestAnimationFrame(start);
+		return;
+	}
+	
 
-		// document.addEventListener('touchend', ()=>a_done.play());
-			
-		}
+	
 	frames++;
 	ctx.clearRect(0,0,cw,ch);
 	//frames
@@ -126,23 +93,7 @@ function start(){
 	//if mouse is down 
 	if(mouse.m_down ){
 
-// 		canvas.ontouchend = function(){
-// 			// a2.load();
-// 			// started = true;
-// 			// toggleFullScreen();
-// 			try {
-// 				// a2.muted = false;
-// 					a_done.currentTime = 1.4;
-// 					a_done.play();
-// 				  // a2.play();
-// 				  document.getElementById("console").innerHTML = "audio: " + a_done.readyState;
-// 				}
-// 				catch(err) {
-// 				  document.getElementById("console").innerHTML = "audio: " + err.message;
-// 				}
-			
-// // a2.play();
-// 		};
+
 		
 	if(mouse.mouseClicked(mouse.x,mouse.y,obj2)){
 
