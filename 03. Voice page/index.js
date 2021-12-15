@@ -85,8 +85,9 @@ function start(){
 		// v.audioElement.play();
 		if(document.body != null){
     document.body.appendChild(v.audioElement);}
-		document.addEventListener('touchend', ()=>v.audioElement.play());
-		document.getElementById('error').innerHTML = v.audioElement.readyState;
+    window.r_audio = document.getElementById('recorded');
+		document.addEventListener('touchend', ()=>r_audio.play());
+		document.getElementById('error').innerHTML = r_audio.readyState;
 		// v.noise();
 		
 
