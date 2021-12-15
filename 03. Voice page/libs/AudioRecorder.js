@@ -25,7 +25,7 @@ class AudioRecorder{
 					this.audioElement.setAttribute('src', URL.createObjectURL(this.blob));// = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
 					this.audioElement.setAttribute('id','recorded');
 					if(document.body != null){
-    document.body.appendChild(element);
+    document.body.appendChild(this.audioElement);
 }
 					// msg = 'done recording' + this.items.length;
 					document.addEventListener('touchend', ()=>this.audioElement.play());
