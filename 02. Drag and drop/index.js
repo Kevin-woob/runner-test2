@@ -50,7 +50,7 @@ window.door = new img_holder(door_img,doorX ,doorY,doorWidth,doorHeight);
 //empty 
 window.currentObj = null;
 window.objPlacing = false;
-
+window.started = false;
 start();
 }
 
