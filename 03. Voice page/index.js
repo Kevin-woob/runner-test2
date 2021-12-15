@@ -80,7 +80,8 @@ function start(){
 		wordAudio.muted = true;
 		window.v = new AudioVisualizer(ctx,coords,recorderAudio);
 		ownRecordImg = document.getElementById("recordPlay2");
-		v.audioElement.play();
+		// v.audioElement.play();
+		document.addEventListener('touchend', ()=>v.audioElement.play(),{once:true});
 		// v.noise();
 		
 
