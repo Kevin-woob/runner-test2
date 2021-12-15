@@ -23,7 +23,7 @@ class AudioRecorder{
 					this.blob = new Blob(this.items,{type:'audio/webm'});
 					// this.audioElement.removeChild(this.audioElement.lastChild);
 					this.audioElement.innerHTML = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
-					msg = 'done recording' + this.items.length;
+					// msg = 'done recording' + this.items.length;
 					document.addEventListener('touchend', ()=>this.audioElement.play());
 					msg = 'done recording and playing' + this.audioElement.duration;
 
