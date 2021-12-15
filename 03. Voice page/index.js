@@ -57,6 +57,7 @@ function start(){
 	//play button
 	ctx.drawImage(audioPlayImg,playBtnX,playBtnY,btnWidth,btnHeight);
 	if(mouse.m_down && mouse.mouseClicked(mouse.x,mouse.y,{x:playBtnX,y:playBtnY,w:btnWidth,h:btnHeight})){
+		wordAudio.muted = false;
 		wordAudio.play();
 		audioPlayImg = document.getElementById('wordPlay2');
 	}
@@ -64,6 +65,7 @@ function start(){
 	ctx.drawImage(recordImg,recordBtnX,recordBtnY,btnWidth,btnHeight);
 	if(mouse.m_down && mouse.mouseClicked(mouse.x,mouse.y,{x:recordBtnX,y:recordBtnY,w:btnWidth,h:btnHeight})){
 		if(!startedRecording){
+			wordAudio.muted = true;
 			recorderAudio = recorder.record();
 			startedRecording = true;
 			recordImg = document.getElementById("record2");
@@ -75,7 +77,7 @@ function start(){
 	// recorded audio button
 	ctx.drawImage(ownRecordImg,recordPlayBtnX,recordPlayBtnY,btnWidth,btnHeight);
 	if(mouse.m_down && mouse.mouseClicked(mouse.x,mouse.y,{x:recordPlayBtnX,y:recordPlayBtnY,w:btnWidth,h:btnHeight})){
-		
+		wordAudio.muted = true;
 		window.v = new AudioVisualizer(ctx,coords,recorderAudio);
 		ownRecordImg = document.getElementById("recordPlay2");
 		v.audioElement.play();
