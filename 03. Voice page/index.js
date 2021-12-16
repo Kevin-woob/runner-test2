@@ -87,10 +87,10 @@ function start(){
     document.body.appendChild(v.audioElement);}
     window.r_audio = document.getElementById('recorded');
 
-		document.addEventListener('touchend', ()=>r_audio.play());
+		// document.addEventListener('touchend', ()=>r_audio.play());
 		wordAudio.pause();
-		document.addEventListener('touchend', ()=>r_audio.play());
-		document.getElementById('error').innerHTML = r_audio.getAttribute('src');
+		// document.addEventListener('touchend', ()=>r_audio.play());
+		// document.getElementById('error').innerHTML = r_audio.getAttribute('src');
 		// v.noise();
 		
 

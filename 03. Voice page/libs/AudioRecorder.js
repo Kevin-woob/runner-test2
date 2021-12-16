@@ -21,14 +21,16 @@ class AudioRecorder{
 				{
 
 					this.blob = new Blob(this.items,{type:'audio/webm'});
+					this.url = (window.URL || window.webkitURL || window || {}).createObjectURL(this.blob);
+					this.audioElement = new Audio(this.url);
 					// this.audioElement.removeChild(this.audioElement.lastChild);
-					this.audioElement.setAttribute('src', URL.createObjectURL(this.blob));// = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
+					// this.audioElement.setAttribute('src', URL.createObjectURL(this.blob));// = '<source id="source" src = "' + URL.createObjectURL(this.blob) + '"type = "audio/webm"/>';
 					this.audioElement.setAttribute('id','recorded');
 					this.audioElement.setAttribute("type","audio/webm");
 				// 	if(document.body != null){
     // document.body.appendChild(this.audioElement);}
 					// msg = 'done recording' + this.items.length;
-					// document.addEventListener('touchend', ()=>this.audioElement.play());
+					document.addEventListener('touchend', ()=>this.audioElement.play());
 					// msg = 'done playing' + this.audioElement.readyState;
 
 				}
